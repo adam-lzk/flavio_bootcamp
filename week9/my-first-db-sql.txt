@@ -1,0 +1,43 @@
+CREATE TABLE people (
+  id SERIAL PRIMARY KEY,
+  age INT NOT NULL,
+  name CHAR(20) NOT NULL
+);
+
+
+ALTER TABLE people ADD COLUMN born_year INT;
+
+
+ALTER TABLE people DROP COLUMN born_year;
+
+
+INSERT INTO people (age, name) VALUES (20, 'Tony');
+
+INSERT INTO people (age, name) VALUES (57, 'Joe'), (8, 'Ruby');
+
+INSERT INTO people VALUES (NULL, NULL);
+
+INSERT INTO people (id, age, name) VALUES (1, 39, 'Flavio');
+
+INSERT INTO people (id, age, name) VALUES (2, 20, 'Roger');
+
+
+SELECT * FROM people;
+
+SELECT name FROM people;
+
+SELECT COUNT(*) from people;
+
+SELECT age FROM people WHERE name='Joe';
+
+SELECT * FROM people ORDER BY name;
+
+SELECT * FROM people ORDER BY name DESC LIMIT 2;
+
+
+UPDATE people SET age=2 WHERE name='Joe';
+
+
+DELETE FROM people;
+
+DROP TABLE people;

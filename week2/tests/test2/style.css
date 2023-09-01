@@ -1,0 +1,13 @@
+@media (min-width: 1080px) {  /* media query with min-width condition to apply some rules only if the width of the page is at least 1080px */
+  body {
+    color: yellow;
+    background-color: blue;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    color: blue;
+    background-color: yellow;
+  }
+}
